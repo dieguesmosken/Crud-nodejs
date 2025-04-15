@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>CRUD EJS</title>
+</head>
+<body>
+  <h1>Itens</h1>
+  <a href="/new">Novo Item</a>
+  <ul>
+    <% items.forEach(item => { %>
+      <li>
+        <strong><%= item.nome %></strong> - <%= item.descricao %>
+        <a href="/edit/<%= item._id %>">Editar</a>
+        <form action="/delete/<%= item._id %>" method="POST" style="display:inline;">
+          <button type="submit">Deletar</button>
+        </form>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

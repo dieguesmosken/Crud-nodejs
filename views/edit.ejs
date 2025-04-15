@@ -1,0 +1,7 @@
+<h1>Editar Item</h1>
+<form action="/update/<%= item._id %>" method="POST">
+  <input name="nome" value="<%= item.nome %>" required />
+  <input name="descricao" value="<%= item.descricao %>" required />
+  <button type="submit">Atualizar</button>
+</form>
+<a href="/">Voltar</a>
