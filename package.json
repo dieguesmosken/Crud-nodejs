@@ -7,13 +7,18 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
+    "body-parser": "^2.2.0",
+    "crud-nodejs": "file:",
     "dotenv": "^16.5.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "mongoose": "^8.13.2",
+    "mongoose": "^8.13.2"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.9"
   }
 }

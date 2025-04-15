@@ -5,18 +5,11 @@
   <title>CRUD EJS</title>
 </head>
 <body>
-  <h1>Itens</h1>
-  <a href="/new">Novo Item</a>
-  <ul>
-    <% items.forEach(item => { %>
-      <li>
-        <strong><%= item.nome %></strong> - <%= item.descricao %>
-        <a href="/edit/<%= item._id %>">Editar</a>
-        <form action="/delete/<%= item._id %>" method="POST" style="display:inline;">
-          <button type="submit">Deletar</button>
-        </form>
-      </li>
-    <% }) %>
-  </ul>
+  <h2>Registrar<h2>
+    <form action="/show" method="POST">
+        <input type="text" placeholder="Nome" name="name">
+        <input type="text" placeholder="Sobrenome" name="surname">
+        <button type="submit">Submit</button>
+    </form> 
 </body>
 </html>

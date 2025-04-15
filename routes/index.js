@@ -4,9 +4,14 @@ import Item from '../models/Item.js';
 const router = express.Router();
 
 // Listar
-router.get('/', async (req, res) => {
-  const items = await Item.find();
-  res.render('index', { items });
+router.get('/show',(req, res) => {
+  // res.render('index');
+  console.log(req.body)
+});
+
+// rota inicial
+router.get('/',(req, res) => {
+  res.render('index');
 });
 
 // Form novo
