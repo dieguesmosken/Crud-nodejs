@@ -3,12 +3,13 @@ import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import routes from './routes/index.js';
 
-const bodyParser = require('body-parser')
+import { json } from 'body-parser';
 
 
 const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}))
+app.use(json())
 
 dotenv.config();
 
